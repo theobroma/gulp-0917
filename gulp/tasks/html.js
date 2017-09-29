@@ -10,6 +10,7 @@ import {
   posthtmlConfig,
   htmlPrettifyConfig
 } from '../config';
+import data from './data';
 
 export const pages = () => {
   const pugConfig = {
@@ -27,6 +28,7 @@ export const pages = () => {
 
 const html =
   gulp.series(
+    data,
     pages
   );
 
