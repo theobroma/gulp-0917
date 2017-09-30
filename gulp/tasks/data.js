@@ -4,7 +4,6 @@ import yaml from 'gulp-yaml';
 import mergeJson from 'gulp-merge-json';
 import { plumberConfig } from '../config';
 
-console.log("Data!!!")
 const data = () =>
   gulp.src([ '**/*.yml', '!**/_*.yml' ], { cwd: 'source/modules/*/data' })
     .pipe(plumber(plumberConfig))

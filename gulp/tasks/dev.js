@@ -1,8 +1,14 @@
 import { series, parallel } from 'gulp';
-import html from './html';
+import { server } from './server';
+import build from './build';
+import watch from './watch';
 
 const dev = series(
-  html
+  build,
+  parallel(
+    server,
+    watch
+  )
 );
 
 export default dev;

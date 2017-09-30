@@ -37,3 +37,19 @@ export const htmlPrettifyConfig = {
   'brace_style': 'expand',
   'end_with_newline': true
 };
+
+export const browserSyncConfig = {
+  server: './dest',
+  notify: false,
+  reloadOnRestart: true,
+  snippetOptions: {
+    rule: {
+      match: /<\/body>/i
+    }
+  }
+};
+
+export const delConfig = [
+  'dest',
+  'tmp'
+];

@@ -26,10 +26,8 @@ export const pages = () => {
     .pipe(notify("Pug Compiled"));
 };
 
-const html =
+export const html =
   gulp.series(
     data,
     pages
   );
-
-export default html;
