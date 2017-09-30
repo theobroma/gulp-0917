@@ -17,4 +17,4 @@ indent_style = tab
 indent_size = 4
 
 [*.{jade,pug}]
-trim_trailing_whitespace = false
+trim_trailing_whitespace = true

@@ -6,13 +6,14 @@ import { html } from './html';
 import sprite from './sprite';
 import moduleImages from './moduleImages';
 import { assets, staticFiles } from './assets';
-import scripts from './scripts';
+import scripts from './scripts';*/
 import css from './css';
-import serviceWorker from './serviceWorker';*/
+/*import serviceWorker from './serviceWorker';*/
 
 const build = series(
   cleanup,
-  html
+  html,
+  css
 );
 
 

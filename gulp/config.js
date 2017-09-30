@@ -1,5 +1,10 @@
+import path from 'path';
+const CWD = process.cwd();
+
 import posthtmlAttrsSorter from 'posthtml-attrs-sorter';
 import errorHandler from './util/errorHandler';
+import stylusFileExists from './util/stylusFileExists';
+import rupture from 'rupture';
 
 export const plumberConfig = {
   errorHandler
@@ -53,3 +58,15 @@ export const delConfig = [
   'dest',
   'tmp'
 ];
+
+// https://github.com/jescalan/accord/blob/master/docs/stylus.md
+export const stylusConfig = {
+  use: [
+    rupture(),
+    stylusFileExists()
+  ],
+  include: [
+    path.join(CWD, 'node_modules')
+  ],
+  'include css': true
+};
