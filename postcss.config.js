@@ -1,6 +1,7 @@
 module.exports = {
   plugins: {
     'lost': {},
+    'precss':{},
     'autoprefixer': {
       cascade: false
     },

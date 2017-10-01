@@ -9,9 +9,8 @@ import bs from '../util/getBrowserSyncInstance';
 
 
 const css = () =>
-  gulp.src([ '*.styl', '!_*.styl' ], { cwd: 'source/static/styles' })
+  gulp.src([ '*.css', '!_*.css.js' ], { cwd: 'source/static/styles' })
     .pipe(plumber(plumberConfig))
-    .pipe(stylus(stylusConfig))
     .pipe(combineMq({ beautify: true }))
     .pipe(postcss())
     .pipe(gulp.dest('dest/assets/stylesheets'))
